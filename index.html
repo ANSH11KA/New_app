@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The New Express</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" onclick="reload()" class="company-logo">
+          <img src="./assets/the news.png" alt="express news logo" />
+        </a>
+        <div class="nav-links">
+          <ul class="flex">
+            <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')"">IPL</li>
+            <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+            <li class="hover-link nav-item" id="politics" onclick = "onNavItemClick('politics')">Politics</li>
+            <li><a href="weather.html" style="color:#183b56;">Weather</a></li>
+            
+          </ul>
+          
+        </div>
+        <div class="search-bar flex">
+          <input id="search-text" type="text" class="news-input" placeholder="e.g Science" />
+          <button class="search-button" id="search-button">Search</button>
+        </div>
+
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="con-clk">
+        <div class="clock">
+          <span id="hours">00</span>
+          <span>:</span>
+          <span id="min">00</span>
+          <span>:</span>
+          <span id="sec">00</span>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="cards-container container flex" id="cards-container">
+        
+    </main>
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://via.placeholder.com/400x200"
+            alt="new img"
+            id="news-image"
+          />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">This is the title</h3>
+          <h6 id="news-source" class="news-source">End Gadget 26/08/2023</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A labore
+            sed voluptate, sint atque acilis debitis vero saepe officiis,
+            cupiditate , cumque ducimus doloribus tempore?
+          </p>
+        </div>
+      </div>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>
